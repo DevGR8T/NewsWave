@@ -11,7 +11,7 @@ class Apiservices {
 
   Future<News?> getNews() async {
     final getnewsurl = Uri.parse(
-        'https://newsapi.org/v2/everything?q=tesla&from=2024-06-08&sortBy=publishedAt&apiKey=6b3508ddf2304e9594003fbd7c7f5af7');
+        'https://newsapi.org/v2/everything?q=tesla&from=2024-06-12&sortBy=publishedAt&apiKey=70738e35ff384ebcb2ff8813bd75002a');
     try {
       //sending a GET request to the API
       final response = await http.get(getnewsurl);
@@ -31,7 +31,7 @@ class Apiservices {
   //Function to get breakingnews from the API
   Future<Slider?> getSlider() async {
     final getsliderurl = Uri.parse(
-        'https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=6b3508ddf2304e9594003fbd7c7f5af7');
+        'https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=70738e35ff384ebcb2ff8813bd75002a');
     try {
       //sending a Get request to the API
       final response = await http.get(getsliderurl);
@@ -49,7 +49,7 @@ class Apiservices {
   //Function to get categories news API
   Future<showCatModel?> getcategorynews(String category) async {
     final getcategorynewsurl = Uri.parse(
-        'https://newsapi.org/v2/top-headlines?country=us&category=$category&apiKey=6b3508ddf2304e9594003fbd7c7f5af7');
+        'https://newsapi.org/v2/top-headlines?country=us&category=$category&apiKey=70738e35ff384ebcb2ff8813bd75002a');
     try {
       print("Fetching news for category: $category");
       print("URL: $getcategorynewsurl");
