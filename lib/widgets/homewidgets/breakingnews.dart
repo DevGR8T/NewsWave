@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:carousel_slider/carousel_slider.dart';
+import 'package:carousel_slider/carousel_slider.dart' as Carousel;
 import 'package:newswave/models/slidermodel.dart';
 import 'package:newswave/services/apiservices.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -58,7 +58,7 @@ class _BreakingNewsState extends State<BreakingNews> {
                 : Stack(
                     children: [
                       // Carousel Slider for displaying news articles
-                      CarouselSlider.builder(
+                      Carousel.CarouselSlider.builder(
                         itemCount: articles.length,
                         itemBuilder: (context, index, realIndex) {
                           final article = articles[index];
@@ -123,7 +123,7 @@ class _BreakingNewsState extends State<BreakingNews> {
                             ],
                           );
                         },
-                        options: CarouselOptions(
+                        options: Carousel.CarouselOptions(
                           height: 300,
                           viewportFraction: 0.9,
                           enlargeCenterPage: true,
