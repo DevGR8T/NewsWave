@@ -11,7 +11,7 @@ class Apiservices {
 
   Future<News?> getNews() async {
     final getnewsurl = Uri.parse(
-        'https://newsapi.org/v2/everything?q=tesla&from=2024-06-12&sortBy=publishedAt&apiKey=70738e35ff384ebcb2ff8813bd75002a');
+        'https://newsapi.org/v2/everything?q=tesla&from=2024-07-25&sortBy=publishedAt&apiKey=000802424d224e4895e470e69f4a1e74');
     try {
       //sending a GET request to the API
       final response = await http.get(getnewsurl);
